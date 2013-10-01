@@ -21,7 +21,7 @@ namespace Lab3
 
         private int channelsplaying;
 
-        Sound(String filename)
+        public Sound(String filename)
         {
             // Init sound device
             device = new FMODNet.SoundDevice();

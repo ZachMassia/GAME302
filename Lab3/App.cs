@@ -9,11 +9,16 @@ namespace Lab3
 {
     class App
     {
-        public Joystick joy = new Joystick();
+        public Joystick joy;
+        public Sound[]  sounds;
+        
+        App()
+        {
+            joy = new Joystick();
 
-        private const int numSounds = 3;
-        public Sound[] sounds = Enumerable.Range(1, numSounds)
-            .Select(i => new Sound(String.Format("sound{0}", i)))
-            .ToArray();
+            sounds = Enumerable.Range(0, 3)
+                .Select(i => new Sound(String.Format("sound{0}", i)))
+                .ToArray();
+        }
     }
 }
